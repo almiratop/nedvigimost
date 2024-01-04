@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EntityModelStoreContainer" CdmEntityContainer="EntityModelContainer">
+    <EntitySetMapping Name="AgentSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Agent)">
+        <MappingFragment StoreEntitySet="AgentSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Comission" ColumnName="Comission" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClientSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Client)">
+        <MappingFragment StoreEntitySet="ClientSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NeedSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Need)">
+        <MappingFragment StoreEntitySet="NeedSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="MaxPrice" ColumnName="MaxPrice" />
+          <ScalarProperty Name="MinPrice" ColumnName="MinPrice" />
+          <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+          <ScalarProperty Name="IdAgent" ColumnName="IdAgent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApartmentNeedSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.ApartmentNeed)">
+        <MappingFragment StoreEntitySet="ApartmentNeedSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MaxRoom" ColumnName="MaxRoom" />
+          <ScalarProperty Name="MinRoom" ColumnName="MinRoom" />
+          <ScalarProperty Name="MaxFloor" ColumnName="MaxFloor" />
+          <ScalarProperty Name="MinFloor" ColumnName="MinFloor" />
+          <ScalarProperty Name="MaxArea" ColumnName="MaxArea" />
+          <ScalarProperty Name="MinArea" ColumnName="MinArea" />
+          <ScalarProperty Name="IdNeed" ColumnName="IdNeed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LandNeedSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.LandNeed)">
+        <MappingFragment StoreEntitySet="LandNeedSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MaxArea" ColumnName="MaxArea" />
+          <ScalarProperty Name="MinArea" ColumnName="MinArea" />
+          <ScalarProperty Name="IdNeed" ColumnName="IdNeed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HouseNeedSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.HouseNeed)">
+        <MappingFragment StoreEntitySet="HouseNeedSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MaxRoom" ColumnName="MaxRoom" />
+          <ScalarProperty Name="MinRoom" ColumnName="MinRoom" />
+          <ScalarProperty Name="MaxFloor" ColumnName="MaxFloor" />
+          <ScalarProperty Name="MinFloor" ColumnName="MinFloor" />
+          <ScalarProperty Name="MaxArea" ColumnName="MaxArea" />
+          <ScalarProperty Name="MinArea" ColumnName="MinArea" />
+          <ScalarProperty Name="IdNeed" ColumnName="IdNeed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstateSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Estate)">
+        <MappingFragment StoreEntitySet="EstateSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Coordinate" ColumnName="Coordinate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApartmentSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Apartment)">
+        <MappingFragment StoreEntitySet="ApartmentSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Room" ColumnName="Room" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="IdEstate" ColumnName="IdEstate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LandSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Land)">
+        <MappingFragment StoreEntitySet="LandSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="IdEstate" ColumnName="IdEstate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HouseSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.House)">
+        <MappingFragment StoreEntitySet="HouseSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Room" ColumnName="Room" />
+          <ScalarProperty Name="Floor" ColumnName="Floor" />
+          <ScalarProperty Name="Area" ColumnName="Area" />
+          <ScalarProperty Name="IdEstate" ColumnName="IdEstate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OfferSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Offer)">
+        <MappingFragment StoreEntitySet="OfferSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+          <ScalarProperty Name="IdAgent" ColumnName="IdAgent" />
+          <ScalarProperty Name="IdEstate" ColumnName="IdEstate" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DealSet">
+      <EntityTypeMapping TypeName="IsTypeOf(EntityModel.Deal)">
+        <MappingFragment StoreEntitySet="DealSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdNeed" ColumnName="IdNeed" />
+          <ScalarProperty Name="IdOffer" ColumnName="IdOffer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

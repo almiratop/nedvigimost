@@ -1,0 +1,43 @@
+﻿<Page x:Class="nedvig.DealPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:nedvig"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1800"
+      Title="DealPage">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="4.5*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" Content="Сделки" />
+            <Label Grid.Column="1" Content="Рассчет комиссии" />
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <ScrollViewer Grid.Column="0">
+                <DataGrid x:Name="dataGrid" Margin="10" SelectionChanged="dataGrid_SelectionChanged"/>
+            </ScrollViewer>
+            <StackPanel Grid.Row="0" Grid.Column="1" Background="White" >
+                <TextBlock x:Name="resultTextBlock" Text="Выберите сделку" Margin="10"/>
+            </StackPanel>
+        </Grid>
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Background="White" HorizontalAlignment="Center"  >
+            <Button Content="Добавить" Click="AddDeal_Click"/>
+            <Button Content="Редактировать" Click="EditDeal_Click"/>
+            <Button Content="Удалить" Click="DeleteDeal_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

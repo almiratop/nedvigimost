@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="EntityModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="EntityModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AgentSet" EntityType="EntityModel.Agent" />
+    <EntitySet Name="ClientSet" EntityType="EntityModel.Client" />
+    <EntitySet Name="NeedSet" EntityType="EntityModel.Need" />
+    <EntitySet Name="ApartmentNeedSet" EntityType="EntityModel.ApartmentNeed" />
+    <EntitySet Name="LandNeedSet" EntityType="EntityModel.LandNeed" />
+    <EntitySet Name="HouseNeedSet" EntityType="EntityModel.HouseNeed" />
+    <EntitySet Name="EstateSet" EntityType="EntityModel.Estate" />
+    <EntitySet Name="ApartmentSet" EntityType="EntityModel.Apartment" />
+    <EntitySet Name="LandSet" EntityType="EntityModel.Land" />
+    <EntitySet Name="HouseSet" EntityType="EntityModel.House" />
+    <EntitySet Name="OfferSet" EntityType="EntityModel.Offer" />
+    <EntitySet Name="DealSet" EntityType="EntityModel.Deal" />
+  </EntityContainer>
+  <EntityType Name="Agent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="Surname" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="LastName" Type="String" Nullable="false" />
+    <Property Name="Comission" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="Surname" Type="String" Nullable="true" />
+    <Property Name="Name" Type="String" Nullable="true" />
+    <Property Name="LastName" Type="String" Nullable="true" />
+    <Property Name="Mail" Type="String" Nullable="true" />
+    <Property Name="Number" Type="String" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Need">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="Type" Type="String" Nullable="false" />
+    <Property Name="Adress" Type="String" Nullable="true" />
+    <Property Name="MaxPrice" Type="Int32" Nullable="true" />
+    <Property Name="MinPrice" Type="Int32" Nullable="true" />
+    <Property Name="IdClient" Type="Int32" Nullable="false" />
+    <Property Name="IdAgent" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ApartmentNeed">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="MaxRoom" Type="Int32" Nullable="true" />
+    <Property Name="MinRoom" Type="Int32" Nullable="true" />
+    <Property Name="MaxFloor" Type="Int32" Nullable="true" />
+    <Property Name="MinFloor" Type="Int32" Nullable="true" />
+    <Property Name="MaxArea" Type="Double" Nullable="true" />
+    <Property Name="MinArea" Type="Double" Nullable="true" />
+    <Property Name="IdNeed" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LandNeed">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="MaxArea" Type="Double" Nullable="true" />
+    <Property Name="MinArea" Type="Double" Nullable="true" />
+    <Property Name="IdNeed" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HouseNeed">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="MaxRoom" Type="Int32" Nullable="true" />
+    <Property Name="MinRoom" Type="Int32" Nullable="true" />
+    <Property Name="MaxFloor" Type="Int32" Nullable="true" />
+    <Property Name="MinFloor" Type="Int32" Nullable="true" />
+    <Property Name="MaxArea" Type="Double" Nullable="true" />
+    <Property Name="MinArea" Type="Double" Nullable="true" />
+    <Property Name="IdNeed" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="Type" Type="String" Nullable="false" />
+    <Property Name="Adress" Type="String" Nullable="true" />
+    <Property Name="Coordinate" Type="String" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Apartment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="Room" Type="Int32" Nullable="true" />
+    <Property Name="Floor" Type="Int32" Nullable="true" />
+    <Property Name="Area" Type="Double" Nullable="true" />
+    <Property Name="IdEstate" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Land">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="Area" Type="Double" Nullable="true" />
+    <Property Name="IdEstate" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="House">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="Room" Type="Int32" Nullable="true" />
+    <Property Name="Floor" Type="Int32" Nullable="true" />
+    <Property Name="Area" Type="Double" Nullable="true" />
+    <Property Name="IdEstate" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Offer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="IdClient" Type="Int32" Nullable="false" />
+    <Property Name="IdAgent" Type="Int32" Nullable="false" />
+    <Property Name="IdEstate" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Deal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+    <Property Name="IdNeed" Type="Int32" Nullable="false" />
+    <Property Name="IdOffer" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>
